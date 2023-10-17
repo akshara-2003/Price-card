@@ -1,0 +1,15 @@
+<div class="card text-center border rounded" style="width: 16rem; height: 30rem; margin: 5px;">
+    <div class="card-header">
+        <h2>{{planObj?.plan}}</h2>
+    </div>
+    <div class="card-body">
+      <h1 class="card-title">${{planObj?.price}} / mo</h1>
+      <ul class="card-text fa-ul" style="list-style: none;">
+        <li *ngFor="let item of planObj?.features">
+            <div class="fw-bold" *ngIf="item.isEnable">{{item.name}}</div>
+            <div class="text-muted" *ngIf="!item.isEnable">{{item.name}}</div>
+        </li>
+      </ul>
+      <a href="#" class="btn btn-primary">Button</a>
+    </div>
+  </div>
